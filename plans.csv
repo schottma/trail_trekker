@@ -1,0 +1,8 @@
+plan_id,plan_name,plan_level,price,max_hikes_per_month,photo_storage_gb,description,created_at
+000000,None,NULL,NULL,NULL,NULL,NULL,NULL
+PLN001M,Explorer,1,4.99,25,1,Basic hiking plan with GPS tracking and limited storage,2021-03-15
+PLN001A,Explorer,1,49.99,25,1,Basic hiking plan with GPS tracking and limited storage,2021-03-15
+PLN002M,Adventurer,2,9.99,999999,10,Enhanced plan with offline maps and premium trail guides,2021-05-20
+PLN002A,Adventurer,2,99.99,999999,10,Enhanced plan with offline maps and premium trail guides,2021-05-20
+PLN003M,Trail Master,3,19.99,999999,50,Premium plan with all features including community access,2021-08-10
+PLN003A,Trail Master,3,199.99,999999,50,Premium plan with all features including community access,2021-08-10
