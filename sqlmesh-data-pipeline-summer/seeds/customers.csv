@@ -1,0 +1,26 @@
+customer_id,username,email,phone,first_name,last_name,date_of_birth,preferred_difficulty,location_city,location_state,location_country,profile_created_date,total_hikes_logged,favorite_trail_type
+CUST001,mountain_mike,mike.johnson@email.com,555-0123,Mike,Johnson,1985-03-15,Moderate,Denver,CO,USA,2023-03-10,47,Mountain
+CUST002,trail_sarah,sarah.wilson@email.com,555-0124,Sarah,Wilson,1990-07-22,Easy,Portland,OR,USA,2023-01-18,23,Forest
+CUST003,peak_hunter,david.chen@email.com,555-0125,David,Chen,1982-11-08,Difficult,Boulder,CO,USA,2022-11-05,156,Mountain
+CUST004,nature_lover,lisa.brown@email.com,555-0126,Lisa,Brown,1988-05-12,Easy,Seattle,WA,USA,2023-05-08,34,Coastal
+CUST005,urban_hiker,john.davis@email.com,555-0127,John,Davis,1992-07-03,Easy,San Francisco,CA,USA,2023-07-01,12,Urban
+CUST006,adventure_amy,amy.martinez@email.com,555-0128,Amy,Martinez,1987-09-17,Moderate,Phoenix,AZ,USA,2022-09-15,89,Desert
+CUST007,forest_walker,tom.garcia@email.com,555-0129,Tom,Garcia,1995-06-28,Easy,Atlanta,GA,USA,2023-06-25,18,Forest
+CUST008,trail_runner,jessica.lee@email.com,555-0130,Jessica,Lee,1989-02-14,Difficult,Austin,TX,USA,2023-02-12,78,Trail Running
+CUST009,summit_seeker,robert.taylor@email.com,555-0131,Robert,Taylor,1984-12-05,Difficult,Salt Lake City,UT,USA,2022-12-03,134,Mountain
+CUST010,weekend_warrior,emily.white@email.com,555-0132,Emily,White,1993-08-19,Moderate,Nashville,TN,USA,2023-08-17,29,Mixed
+CUST011,nature_photo,chris.anderson@email.com,555-0133,Chris,Anderson,1986-04-07,Moderate,Asheville,NC,USA,2023-04-05,45,Scenic
+CUST012,city_escape,maria.rodriguez@email.com,555-0134,Maria,Rodriguez,1991-09-11,Easy,Los Angeles,CA,USA,2023-09-09,15,Urban
+CUST013,trail_guide,kevin.thompson@email.com,555-0135,Kevin,Thompson,1983-03-25,Difficult,Bozeman,MT,USA,2023-03-22,167,Mountain
+CUST014,outdoor_enthusiast,jennifer.clark@email.com,555-0136,Jennifer,Clark,1987-10-30,Moderate,Burlington,VT,USA,2022-10-28,92,Forest
+CUST015,casual_hiker,brian.lewis@email.com,555-0137,Brian,Lewis,1994-07-16,Easy,Richmond,VA,USA,2023-07-14,8,Park
+CUST016,desert_explorer,nicole.walker@email.com,555-0138,Nicole,Walker,1988-05-03,Moderate,Tucson,AZ,USA,2023-05-01,56,Desert
+CUST017,family_hiker,steven.hall@email.com,555-0139,Steven,Hall,1985-08-07,Easy,Portland,ME,USA,2023-08-05,31,Family-Friendly
+CUST018,backcountry_pro,amanda.allen@email.com,555-0140,Amanda,Allen,1981-08-22,Difficult,Missoula,MT,USA,2022-08-20,203,Backcountry
+CUST019,beach_walker,daniel.young@email.com,555-0141,Daniel,Young,1990-06-14,Easy,San Diego,CA,USA,2023-06-12,19,Coastal
+CUST020,peak_bagger,michelle.king@email.com,555-0142,Michelle,King,1986-09-28,Difficult,Colorado Springs,CO,USA,2023-09-26,87,Mountain
+CUST021,trail_newbie,jason.wright@email.com,555-0143,Jason,Wright,1992-10-15,Easy,Raleigh,NC,USA,2023-10-15,6,Park
+CUST022,adventure_couple,lisa.lopez@email.com,555-0144,Lisa,Lopez,1989-11-02,Moderate,Bend,OR,USA,2023-11-02,41,Mixed
+CUST023,fitness_hiker,michael.hill@email.com,555-0145,Michael,Hill,1987-11-18,Moderate,Chattanooga,TN,USA,2023-11-18,38,Fitness
+CUST024,nature_student,rachel.green@email.com,555-0146,Rachel,Green,1996-12-05,Easy,Ithaca,NY,USA,2023-12-05,14,Educational
+CUST025,extreme_hiker,andrew.adams@email.com,555-0147,Andrew,Adams,1984-01-12,Difficult,Jackson,WY,USA,2024-01-12,112,Extreme

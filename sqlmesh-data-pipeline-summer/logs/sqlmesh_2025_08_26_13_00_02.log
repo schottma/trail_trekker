@@ -1,0 +1,6 @@
+2025-08-26 13:00:03,450 - MainThread - sqlmesh.core.config.connection - INFO - Creating new DuckDB adapter for data files: {'trail_trekker.db'} (connection.py:481)
+2025-08-26 13:00:03,549 - MainThread - sqlmesh.core.config.connection - INFO - Using existing DuckDB adapter due to overlapping data file: trail_trekker.db (connection.py:471)
+2025-08-26 13:00:03,592 - MainThread - sqlmesh.core.state_sync.db.migrator - INFO - Applying migration <module 'sqlmesh.migrations.v0001_init' from '/Users/madison/sqlmesh/sqlmesh-data-pipeline-summer/.venv/lib/python3.9/site-packages/sqlmesh/migrations/v0001_init.py'> (migrator.py:177)
+2025-08-26 13:00:03,599 - MainThread - sqlmesh.core.engine_adapter.base - WARNING - Failed to create schema 'sqlmesh': IO Error: Could not set lock on file "/Users/madison/sqlmesh/sqlmesh-data-pipeline-summer/trail_trekker.db": Conflicting lock is held in /Users/madison/.duckdb/cli/1.3.1/duckdb (PID 5632) by user madison. See also https://duckdb.org/docs/stable/connect/concurrency (base.py:1196)
+2025-08-26 13:00:03,606 - MainThread - sqlmesh.core.state_sync.db.migrator - INFO - Starting migration rollback. (migrator.py:135)
+2025-08-26 13:00:03,640 - MainThread - root - INFO - Shutting down the event dispatcher (dispatcher.py:159)

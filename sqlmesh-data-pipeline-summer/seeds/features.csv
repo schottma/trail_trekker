@@ -1,0 +1,9 @@
+feature_id,feature_name,feature_description,feature_category
+FTR001,"Hike Searcher","Search and discover hiking trails in your area","Core"
+FTR002,"Tracker","Real-time GPS tracking during hikes","Core"
+FTR003,"Journaler","Log and record your hiking experiences","Core"
+FTR004,"Off-Grid Access","Download maps and use app without internet connection","Advanced"
+FTR005,"Photo Upload","Add and store photos from your hiking adventures","Advanced"
+FTR06,"Hidden Trails","Access to exclusive and lesser-known trail recommendations","Advanced"
+FTR007,"Community Forum","Participate in hiking community discussions","Community"
+FTR008,"Comment System","Comment on other hikers' posts and trail reviews","Community"

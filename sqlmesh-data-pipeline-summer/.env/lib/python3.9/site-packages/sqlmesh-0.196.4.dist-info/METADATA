@@ -1,0 +1,540 @@
+Metadata-Version: 2.4
+Name: sqlmesh
+Version: 0.196.4
+Summary: Next-generation data transformation framework
+Author-email: "TobikoData Inc." <engineering@tobikodata.com>
+License:                                  Apache License
+                                   Version 2.0, January 2004
+                                http://www.apache.org/licenses/
+        
+           TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION
+        
+           1. Definitions.
+        
+              "License" shall mean the terms and conditions for use, reproduction,
+              and distribution as defined by Sections 1 through 9 of this document.
+        
+              "Licensor" shall mean the copyright owner or entity authorized by
+              the copyright owner that is granting the License.
+        
+              "Legal Entity" shall mean the union of the acting entity and all
+              other entities that control, are controlled by, or are under common
+              control with that entity. For the purposes of this definition,
+              "control" means (i) the power, direct or indirect, to cause the
+              direction or management of such entity, whether by contract or
+              otherwise, or (ii) ownership of fifty percent (50%) or more of the
+              outstanding shares, or (iii) beneficial ownership of such entity.
+        
+              "You" (or "Your") shall mean an individual or Legal Entity
+              exercising permissions granted by this License.
+        
+              "Source" form shall mean the preferred form for making modifications,
+              including but not limited to software source code, documentation
+              source, and configuration files.
+        
+              "Object" form shall mean any form resulting from mechanical
+              transformation or translation of a Source form, including but
+              not limited to compiled object code, generated documentation,
+              and conversions to other media types.
+        
+              "Work" shall mean the work of authorship, whether in Source or
+              Object form, made available under the License, as indicated by a
+              copyright notice that is included in or attached to the work
+              (an example is provided in the Appendix below).
+        
+              "Derivative Works" shall mean any work, whether in Source or Object
+              form, that is based on (or derived from) the Work and for which the
+              editorial revisions, annotations, elaborations, or other modifications
+              represent, as a whole, an original work of authorship. For the purposes
+              of this License, Derivative Works shall not include works that remain
+              separable from, or merely link (or bind by name) to the interfaces of,
+              the Work and Derivative Works thereof.
+        
+              "Contribution" shall mean any work of authorship, including
+              the original version of the Work and any modifications or additions
+              to that Work or Derivative Works thereof, that is intentionally
+              submitted to Licensor for inclusion in the Work by the copyright owner
+              or by an individual or Legal Entity authorized to submit on behalf of
+              the copyright owner. For the purposes of this definition, "submitted"
+              means any form of electronic, verbal, or written communication sent
+              to the Licensor or its representatives, including but not limited to
+              communication on electronic mailing lists, source code control systems,
+              and issue tracking systems that are managed by, or on behalf of, the
+              Licensor for the purpose of discussing and improving the Work, but
+              excluding communication that is conspicuously marked or otherwise
+              designated in writing by the copyright owner as "Not a Contribution."
+        
+              "Contributor" shall mean Licensor and any individual or Legal Entity
+              on behalf of whom a Contribution has been received by Licensor and
+              subsequently incorporated within the Work.
+        
+           2. Grant of Copyright License. Subject to the terms and conditions of
+              this License, each Contributor hereby grants to You a perpetual,
+              worldwide, non-exclusive, no-charge, royalty-free, irrevocable
+              copyright license to reproduce, prepare Derivative Works of,
+              publicly display, publicly perform, sublicense, and distribute the
+              Work and such Derivative Works in Source or Object form.
+        
+           3. Grant of Patent License. Subject to the terms and conditions of
+              this License, each Contributor hereby grants to You a perpetual,
+              worldwide, non-exclusive, no-charge, royalty-free, irrevocable
+              (except as stated in this section) patent license to make, have made,
+              use, offer to sell, sell, import, and otherwise transfer the Work,
+              where such license applies only to those patent claims licensable
+              by such Contributor that are necessarily infringed by their
+              Contribution(s) alone or by combination of their Contribution(s)
+              with the Work to which such Contribution(s) was submitted. If You
+              institute patent litigation against any entity (including a
+              cross-claim or counterclaim in a lawsuit) alleging that the Work
+              or a Contribution incorporated within the Work constitutes direct
+              or contributory patent infringement, then any patent licenses
+              granted to You under this License for that Work shall terminate
+              as of the date such litigation is filed.
+        
+           4. Redistribution. You may reproduce and distribute copies of the
+              Work or Derivative Works thereof in any medium, with or without
+              modifications, and in Source or Object form, provided that You
+              meet the following conditions:
+        
+              (a) You must give any other recipients of the Work or
+                  Derivative Works a copy of this License; and
+        
+              (b) You must cause any modified files to carry prominent notices
+                  stating that You changed the files; and
+        
+              (c) You must retain, in the Source form of any Derivative Works
+                  that You distribute, all copyright, patent, trademark, and
+                  attribution notices from the Source form of the Work,
+                  excluding those notices that do not pertain to any part of
+                  the Derivative Works; and
+        
+              (d) If the Work includes a "NOTICE" text file as part of its
+                  distribution, then any Derivative Works that You distribute must
+                  include a readable copy of the attribution notices contained
+                  within such NOTICE file, excluding those notices that do not
+                  pertain to any part of the Derivative Works, in at least one
+                  of the following places: within a NOTICE text file distributed
+                  as part of the Derivative Works; within the Source form or
+                  documentation, if provided along with the Derivative Works; or,
+                  within a display generated by the Derivative Works, if and
+                  wherever such third-party notices normally appear. The contents
+                  of the NOTICE file are for informational purposes only and
+                  do not modify the License. You may add Your own attribution
+                  notices within Derivative Works that You distribute, alongside
+                  or as an addendum to the NOTICE text from the Work, provided
+                  that such additional attribution notices cannot be construed
+                  as modifying the License.
+        
+              You may add Your own copyright statement to Your modifications and
+              may provide additional or different license terms and conditions
+              for use, reproduction, or distribution of Your modifications, or
+              for any such Derivative Works as a whole, provided Your use,
+              reproduction, and distribution of the Work otherwise complies with
+              the conditions stated in this License.
+        
+           5. Submission of Contributions. Unless You explicitly state otherwise,
+              any Contribution intentionally submitted for inclusion in the Work
+              by You to the Licensor shall be under the terms and conditions of
+              this License, without any additional terms or conditions.
+              Notwithstanding the above, nothing herein shall supersede or modify
+              the terms of any separate license agreement you may have executed
+              with Licensor regarding such Contributions.
+        
+           6. Trademarks. This License does not grant permission to use the trade
+              names, trademarks, service marks, or product names of the Licensor,
+              except as required for reasonable and customary use in describing the
+              origin of the Work and reproducing the content of the NOTICE file.
+        
+           7. Disclaimer of Warranty. Unless required by applicable law or
+              agreed to in writing, Licensor provides the Work (and each
+              Contributor provides its Contributions) on an "AS IS" BASIS,
+              WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or
+              implied, including, without limitation, any warranties or conditions
+              of TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A
+              PARTICULAR PURPOSE. You are solely responsible for determining the
+              appropriateness of using or redistributing the Work and assume any
+              risks associated with Your exercise of permissions under this License.
+        
+           8. Limitation of Liability. In no event and under no legal theory,
+              whether in tort (including negligence), contract, or otherwise,
+              unless required by applicable law (such as deliberate and grossly
+              negligent acts) or agreed to in writing, shall any Contributor be
+              liable to You for damages, including any direct, indirect, special,
+              incidental, or consequential damages of any character arising as a
+              result of this License or out of the use or inability to use the
+              Work (including but not limited to damages for loss of goodwill,
+              work stoppage, computer failure or malfunction, or any and all
+              other commercial damages or losses), even if such Contributor
+              has been advised of the possibility of such damages.
+        
+           9. Accepting Warranty or Additional Liability. While redistributing
+              the Work or Derivative Works thereof, You may choose to offer,
+              and charge a fee for, acceptance of support, warranty, indemnity,
+              or other liability obligations and/or rights consistent with this
+              License. However, in accepting such obligations, You may act only
+              on Your own behalf and on Your sole responsibility, not on behalf
+              of any other Contributor, and only if You agree to indemnify,
+              defend, and hold each Contributor harmless for any liability
+              incurred by, or claims asserted against, such Contributor by reason
+              of your accepting any such warranty or additional liability.
+        
+           END OF TERMS AND CONDITIONS
+        
+           APPENDIX: How to apply the Apache License to your work.
+        
+              To apply the Apache License to your work, attach the following
+              boilerplate notice, with the fields enclosed by brackets "[]"
+              replaced with your own identifying information. (Don't include
+              the brackets!)  The text should be enclosed in the appropriate
+              comment syntax for the file format. We also recommend that a
+              file or class name and description of purpose be included on the
+              same "printed page" as the copyright notice for easier
+              identification within third-party archives.
+        
+           Copyright 2024 Tobiko Data Inc.
+        
+           Licensed under the Apache License, Version 2.0 (the "License");
+           you may not use this file except in compliance with the License.
+           You may obtain a copy of the License at
+        
+               http://www.apache.org/licenses/LICENSE-2.0
+        
+           Unless required by applicable law or agreed to in writing, software
+           distributed under the License is distributed on an "AS IS" BASIS,
+           WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+           See the License for the specific language governing permissions and
+           limitations under the License.
+        
+Project-URL: Homepage, https://sqlmesh.com/
+Project-URL: Documentation, https://sqlmesh.readthedocs.io/en/stable/
+Project-URL: Repository, https://github.com/TobikoData/sqlmesh
+Project-URL: Issues, https://github.com/TobikoData/sqlmesh/issues
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: SQL
+Classifier: Programming Language :: Python :: 3 :: Only
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: astor
+Requires-Dist: click
+Requires-Dist: croniter
+Requires-Dist: duckdb!=0.10.3,>=0.10.0
+Requires-Dist: dateparser
+Requires-Dist: hyperscript>=0.1.0
+Requires-Dist: importlib-metadata; python_version < "3.12"
+Requires-Dist: ipywidgets
+Requires-Dist: jinja2
+Requires-Dist: packaging
+Requires-Dist: pandas
+Requires-Dist: pydantic>=2.0.0
+Requires-Dist: requests
+Requires-Dist: rich[jupyter]
+Requires-Dist: ruamel.yaml
+Requires-Dist: sqlglot[rs]~=26.30.0
+Requires-Dist: tenacity
+Requires-Dist: time-machine
+Requires-Dist: json-stream
+Provides-Extra: athena
+Requires-Dist: PyAthena[Pandas]; extra == "athena"
+Provides-Extra: azuresql
+Requires-Dist: pymssql; extra == "azuresql"
+Provides-Extra: azuresql-odbc
+Requires-Dist: pyodbc; extra == "azuresql-odbc"
+Provides-Extra: bigquery
+Requires-Dist: google-cloud-bigquery[pandas]; extra == "bigquery"
+Requires-Dist: google-cloud-bigquery-storage; extra == "bigquery"
+Provides-Extra: bigframes
+Requires-Dist: bigframes>=1.32.0; extra == "bigframes"
+Provides-Extra: clickhouse
+Requires-Dist: clickhouse-connect; extra == "clickhouse"
+Provides-Extra: databricks
+Requires-Dist: databricks-sql-connector[pyarrow]; extra == "databricks"
+Provides-Extra: dev
+Requires-Dist: agate==1.7.1; extra == "dev"
+Requires-Dist: beautifulsoup4; extra == "dev"
+Requires-Dist: clickhouse-connect; extra == "dev"
+Requires-Dist: cryptography; extra == "dev"
+Requires-Dist: databricks-sql-connector; extra == "dev"
+Requires-Dist: dbt-bigquery; extra == "dev"
+Requires-Dist: dbt-core; extra == "dev"
+Requires-Dist: dbt-duckdb>=1.7.1; extra == "dev"
+Requires-Dist: dbt-snowflake; extra == "dev"
+Requires-Dist: dbt-athena-community; extra == "dev"
+Requires-Dist: dbt-clickhouse; extra == "dev"
+Requires-Dist: dbt-databricks; extra == "dev"
+Requires-Dist: dbt-redshift; extra == "dev"
+Requires-Dist: dbt-sqlserver>=1.7.0; extra == "dev"
+Requires-Dist: dbt-trino; extra == "dev"
+Requires-Dist: Faker; extra == "dev"
+Requires-Dist: google-auth; extra == "dev"
+Requires-Dist: google-cloud-bigquery; extra == "dev"
+Requires-Dist: google-cloud-bigquery-storage; extra == "dev"
+Requires-Dist: httpx; extra == "dev"
+Requires-Dist: mypy~=1.13.0; extra == "dev"
+Requires-Dist: pandas-stubs; extra == "dev"
+Requires-Dist: pre-commit; extra == "dev"
+Requires-Dist: psycopg2-binary; extra == "dev"
+Requires-Dist: pydantic; extra == "dev"
+Requires-Dist: PyAthena[Pandas]; extra == "dev"
+Requires-Dist: PyGithub>=2.6.0; extra == "dev"
+Requires-Dist: pyperf; extra == "dev"
+Requires-Dist: pyspark~=3.5.0; extra == "dev"
+Requires-Dist: pytest; extra == "dev"
+Requires-Dist: pytest-asyncio; extra == "dev"
+Requires-Dist: pytest-mock; extra == "dev"
+Requires-Dist: pytest-retry; extra == "dev"
+Requires-Dist: pytest-xdist; extra == "dev"
+Requires-Dist: pytz; extra == "dev"
+Requires-Dist: redshift_connector; extra == "dev"
+Requires-Dist: ruff~=0.11.0; extra == "dev"
+Requires-Dist: snowflake-connector-python[pandas,secure-local-storage]>=3.0.2; extra == "dev"
+Requires-Dist: sqlalchemy-stubs; extra == "dev"
+Requires-Dist: trino; extra == "dev"
+Requires-Dist: types-croniter; extra == "dev"
+Requires-Dist: types-dateparser; extra == "dev"
+Requires-Dist: types-PyMySQL; extra == "dev"
+Requires-Dist: types-python-dateutil; extra == "dev"
+Requires-Dist: types-pytz; extra == "dev"
+Requires-Dist: types-requests==2.28.8; extra == "dev"
+Requires-Dist: typing-extensions; extra == "dev"
+Provides-Extra: dbt
+Requires-Dist: dbt-core<2; extra == "dbt"
+Provides-Extra: dlt
+Requires-Dist: dlt; extra == "dlt"
+Provides-Extra: gcppostgres
+Requires-Dist: cloud-sql-python-connector[pg8000]>=1.8.0; extra == "gcppostgres"
+Provides-Extra: github
+Requires-Dist: PyGithub~=2.5.0; extra == "github"
+Provides-Extra: llm
+Requires-Dist: langchain; extra == "llm"
+Requires-Dist: openai; extra == "llm"
+Provides-Extra: mssql
+Requires-Dist: pymssql; extra == "mssql"
+Provides-Extra: mssql-odbc
+Requires-Dist: pyodbc; extra == "mssql-odbc"
+Provides-Extra: mysql
+Requires-Dist: pymysql; extra == "mysql"
+Provides-Extra: mwaa
+Requires-Dist: boto3; extra == "mwaa"
+Provides-Extra: postgres
+Requires-Dist: psycopg2; extra == "postgres"
+Provides-Extra: redshift
+Requires-Dist: redshift_connector; extra == "redshift"
+Provides-Extra: slack
+Requires-Dist: slack_sdk; extra == "slack"
+Provides-Extra: snowflake
+Requires-Dist: cryptography; extra == "snowflake"
+Requires-Dist: snowflake-connector-python[pandas,secure-local-storage]; extra == "snowflake"
+Requires-Dist: snowflake-snowpark-python; extra == "snowflake"
+Provides-Extra: trino
+Requires-Dist: trino; extra == "trino"
+Provides-Extra: web
+Requires-Dist: fastapi==0.115.5; extra == "web"
+Requires-Dist: watchfiles>=0.19.0; extra == "web"
+Requires-Dist: uvicorn[standard]==0.22.0; extra == "web"
+Requires-Dist: sse-starlette>=0.2.2; extra == "web"
+Requires-Dist: pyarrow; extra == "web"
+Provides-Extra: lsp
+Requires-Dist: fastapi==0.115.5; extra == "lsp"
+Requires-Dist: watchfiles>=0.19.0; extra == "lsp"
+Requires-Dist: uvicorn[standard]==0.22.0; extra == "lsp"
+Requires-Dist: sse-starlette>=0.2.2; extra == "lsp"
+Requires-Dist: pyarrow; extra == "lsp"
+Requires-Dist: pygls<2.0.0,>=1.2.0; extra == "lsp"
+Requires-Dist: lsprotocol; extra == "lsp"
+Provides-Extra: risingwave
+Requires-Dist: psycopg2; extra == "risingwave"
+Dynamic: license-file
+
+<p align="center">
+  <img src="docs/readme/sqlmesh.png" alt="SQLMesh logo" width="50%" height="50%">
+</p>
+
+SQLMesh is a next-generation data transformation framework designed to ship data quickly, efficiently, and without error. Data teams can run and deploy data transformations written in SQL or Python with visibility and control at any size.
+
+It is more than just a [dbt alternative](https://tobikodata.com/reduce_costs_with_cron_and_partitions.html).
+
+<p align="center">
+  <img src="docs/readme/architecture_diagram.png" alt="Architecture Diagram" width="100%" height="100%">
+</p>
+
+## Core Features
+
+<img src="https://github.com/TobikoData/sqlmesh-public-assets/blob/main/vscode.gif?raw=true" alt="SQLMesh Plan Mode">
+
+> Get instant SQL impact and context of your changes, both in the CLI and in the [SQLMesh VSCode Extension](https://sqlmesh.readthedocs.io/en/latest/guides/vscode/?h=vs+cod)
+
+  <details>
+  <summary><b>Virtual Data Environments</b></summary>
+
+  * See a full diagram of how [Virtual Data Environments](https://whimsical.com/virtual-data-environments-MCT8ngSxFHict4wiL48ymz) work
+  * [Watch this video to learn more](https://www.youtube.com/watch?v=weJH3eM0rzc)
+
+  </details>
+
+  * Create isolated development environments without data warehouse costs
+  * Plan / Apply workflow like [Terraform](https://www.terraform.io/) to understand potential impact of changes
+  * Easy to use [CI/CD bot](https://sqlmesh.readthedocs.io/en/stable/integrations/github/) for true blue-green deployments
+
+<details>
+<summary><b>Efficiency and Testing</b></summary>
+
+Running this command will generate a unit test file in the `tests/` folder: `test_stg_payments.yaml`
+
+Runs a live query to generate the expected output of the model
+
+```bash
+sqlmesh create_test tcloud_demo.stg_payments --query tcloud_demo.seed_raw_payments "select * from tcloud_demo.seed_raw_payments limit 5"
+
+# run the unit test
+sqlmesh test
+```
+
+```sql
+MODEL (
+  name tcloud_demo.stg_payments,
+  cron '@daily',
+  grain payment_id,
+  audits (UNIQUE_VALUES(columns = (
+      payment_id
+  )), NOT_NULL(columns = (
+      payment_id
+  )))
+);
+
+SELECT
+    id AS payment_id,
+    order_id,
+    payment_method,
+    amount / 100 AS amount, /* `amount` is currently stored in cents, so we convert it to dollars */
+    'new_column' AS new_column, /* non-breaking change example  */
+FROM tcloud_demo.seed_raw_payments
+```
+
+```yaml
+test_stg_payments:
+model: tcloud_demo.stg_payments
+inputs:
+    tcloud_demo.seed_raw_payments:
+      - id: 66
+        order_id: 58
+        payment_method: coupon
+        amount: 1800
+      - id: 27
+        order_id: 24
+        payment_method: coupon
+        amount: 2600
+      - id: 30
+        order_id: 25
+        payment_method: coupon
+        amount: 1600
+      - id: 109
+        order_id: 95
+        payment_method: coupon
+        amount: 2400
+      - id: 3
+        order_id: 3
+        payment_method: coupon
+        amount: 100
+outputs:
+    query:
+      - payment_id: 66
+        order_id: 58
+        payment_method: coupon
+        amount: 18.0
+        new_column: new_column
+      - payment_id: 27
+        order_id: 24
+        payment_method: coupon
+        amount: 26.0
+        new_column: new_column
+      - payment_id: 30
+        order_id: 25
+        payment_method: coupon
+        amount: 16.0
+        new_column: new_column
+      - payment_id: 109
+        order_id: 95
+        payment_method: coupon
+        amount: 24.0
+        new_column: new_column
+      - payment_id: 3
+        order_id: 3
+        payment_method: coupon
+        amount: 1.0
+        new_column: new_column
+```
+</details>
+
+* Never build a table [more than once](https://tobikodata.com/simplicity-or-efficiency-how-dbt-makes-you-choose.html)
+* Track what data’s been modified and run only the necessary transformations for [incremental models](https://tobikodata.com/correctly-loading-incremental-data-at-scale.html)
+* Run [unit tests](https://tobikodata.com/we-need-even-greater-expectations.html) for free and configure automated audits
+* Run [table diffs](https://sqlmesh.readthedocs.io/en/stable/examples/sqlmesh_cli_crash_course/?h=crash#run-data-diff-against-prod) between prod and dev based on tables/views impacted by a change 
+
+<details>
+<summary><b>Level Up Your SQL</b></summary>
+Write SQL in any dialect and SQLMesh will transpile it to your target SQL dialect on the fly before sending it to the warehouse.
+<img src="https://github.com/TobikoData/sqlmesh/blob/main/docs/readme/transpile_example.png?raw=true" alt="Transpile Example">
+</details>
+
+* Debug transformation errors *before* you run them in your warehouse in [10+ different SQL dialects](https://sqlmesh.readthedocs.io/en/stable/integrations/overview/#execution-engines)
+* Definitions using [simply SQL](https://sqlmesh.readthedocs.io/en/stable/concepts/models/sql_models/#sql-based-definition) (no need for redundant and confusing `Jinja` + `YAML`)
+* See impact of changes before you run them in your warehouse with column-level lineage
+
+For more information, check out the [website](https://www.tobikodata.com/sqlmesh) and [documentation](https://sqlmesh.readthedocs.io/en/stable/).
+
+## Getting Started
+Install SQLMesh through [pypi](https://pypi.org/project/sqlmesh/) by running:
+
+```bash
+mkdir sqlmesh-example
+cd sqlmesh-example
+python -m venv .venv
+source .venv/bin/activate
+pip install 'sqlmesh[lsp]' # install the sqlmesh package with extensions to work with VSCode
+source .venv/bin/activate # reactivate the venv to ensure you're using the right installation
+sqlmesh init # follow the prompts to get started (choose DuckDB)
+```
+
+</details>
+
+> Note: You may need to run `python3` or `pip3` instead of `python` or `pip`, depending on your python installation.
+
+<details>
+<summary><b>Windows Installation</b></summary>
+
+```bash
+mkdir sqlmesh-example
+cd sqlmesh-example
+python -m venv .venv
+.\.venv\Scripts\Activate.ps1
+pip install 'sqlmesh[lsp]' # install the sqlmesh package with extensions to work with VSCode
+.\.venv\Scripts\Activate.ps1 # reactivate the venv to ensure you're using the right installation
+sqlmesh init # follow the prompts to get started (choose DuckDB)
+```
+</details>
+
+
+Follow the [quickstart guide](https://sqlmesh.readthedocs.io/en/stable/quickstart/cli/) to learn how to use SQLMesh. You already have a head start!
+
+Follow the [crash course](https://sqlmesh.readthedocs.io/en/stable/examples/sqlmesh_cli_crash_course/) to learn the core movesets and use the easy to reference cheat sheet. 
+
+Follow this [example](https://sqlmesh.readthedocs.io/en/stable/examples/incremental_time_full_walkthrough/) to learn how to use SQLMesh in a full walkthrough.
+
+## Join Our Community
+Together, we want to build data transformation without the waste. Connect with us in the following ways:
+
+* Join the [Tobiko Slack Community](https://tobikodata.com/slack) to ask questions, or just to say hi!
+* File an issue on our [GitHub](https://github.com/TobikoData/sqlmesh/issues/new)
+* Send us an email at [hello@tobikodata.com](mailto:hello@tobikodata.com) with your questions or feedback
+* Read our [blog](https://tobikodata.com/blog)
+
+## Contribution
+Contributions in the form of issues or pull requests (from fork) are greatly appreciated. 
+
+[Read more](https://sqlmesh.readthedocs.io/en/stable/development/) on how to contribute to SQLMesh open source.
+
+[Watch this video walkthrough](https://www.loom.com/share/2abd0d661c12459693fa155490633126?sid=b65c1c0f-8ef7-4036-ad19-3f85a3b87ff2) to see how our team contributes a feature to SQLMesh.

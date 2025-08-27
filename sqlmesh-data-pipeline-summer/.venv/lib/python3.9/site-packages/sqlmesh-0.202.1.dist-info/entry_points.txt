@@ -1,0 +1,4 @@
+[console_scripts]
+sqlmesh = sqlmesh.cli.main:cli
+sqlmesh_cicd = sqlmesh.cicd.bot:bot
+sqlmesh_lsp = sqlmesh.lsp.main:main
